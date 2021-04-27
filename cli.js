@@ -1,12 +1,9 @@
 const program = require('commander');
 const api = require('./index')
-var arguments = process.argv;
 
 
-//命令行选项
 program
     .option('-z, --zzz', 'output extra debugging')
-//子命令
 program
     .command('add')
     .description('add a task')
