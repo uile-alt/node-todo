@@ -10,5 +10,10 @@ module.exports.clear = async (title) => {
     await db.write([])
 }
 module.exports.showAll = async () => {
+
     const list = await db.read()
+
+    list.forEach((task, index) => {
+        console.log(`${task.done ? '[x]' : '[_]'} ${index + 1} - ${task.title}`);
+    })
 }
