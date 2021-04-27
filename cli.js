@@ -28,3 +28,4 @@ program
         api.showAll()
     })
 program.parse(process.argv);
+console.log(hi);
