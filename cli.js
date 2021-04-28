@@ -1,9 +1,11 @@
+#!/usr/bin/env node
 const program = require('commander');
 const api = require('./index')
+const pkg = require("./package.json")
 
 
 program
-    .option('-z, --zzz', 'output extra debugging')
+    .version(pkg.version)
 program
     .command('add')
     .description('add a task')
@@ -28,4 +30,3 @@ program
         api.showAll()
     })
 program.parse(process.argv);
-console.log(hi);
